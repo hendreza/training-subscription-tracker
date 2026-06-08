@@ -59,9 +59,13 @@ print(is_active)
 
 # Questions:
 # 1. What three values are stored?
+#  Netflix as string, 199 as int ( flaot ) and True as bool
 # 2. What will be printed?
+#Netflix 199 Ture
 # 3. Which value is a string?
+#subscription_name
 # 4. Which value is a boolean?
+#is_active
 
 
 
@@ -74,7 +78,10 @@ discount = 20
 
 # Bug question:
 # Why would this line be a problem?
+# 
 # final_cost = monthly_cost - discount
+
+#monthly_cost is stored as a sting
 
 
 
@@ -125,8 +132,11 @@ Even simple data can be dangerous if we trust it blindly.
 
 Questions:
 1. What if monthly_cost is entered as text instead of a number?
+# the system should error with " invalid input "
 2. What if subscription_name is empty?
+# system should create an error " missing data "
 3. Should a real app trust values directly from a user form?
+# no
 """
 
 
@@ -137,11 +147,29 @@ Questions:
 
 """
 Stretch task: only do this if the main tasks felt comfortable without help.
+
+i dont think the main task did anyhting or i didnt understand the task because it asked for code that was already written
+
 """
 
 # Stretch:
 # Change the function so it accepts name, cost, and active as parameters.
 # Then return the same kind of sentence.
+
+def create_basic_subscription_summary(subscription_name, monthly_cost, is_active):
+
+
+    return f"{subscription_name} costs R{monthly_cost} per month. Active: {is_active}"
+
+
+# input{
+#    subscription_name = "Spotify",
+#    monthly_cost = 69,
+#    is_active = True,
+# }
+
+result = create_basic_subscription_summary()
+print(result)
 
 
 
@@ -153,12 +181,18 @@ Stretch task: only do this if the main tasks felt comfortable without help.
 Answer these after completing the lesson:
 
 1. What did I understand without looking anything up?
+# i understand the assaigning of variables and the different types of input ( str, int , float)
 2. What part took the longest to reason through?
+#the stretch section was a bit tough and the actual task didnt make sense to me
 3. What bug or risk did I spot?
+# we need to define what the data type will be otherwise we could run into some data integrity issues down the line
 4. Which pytest case would I add next?
+# i would add negative case tests like if the discount makes the number negative, if the name is incorrect, if the number is stored as int but is a flaot.
 5. What should tomorrow become:
    - easier reinforcement
    - same level with more practice
    - harder/stretch level
+
+   # tough for me to say becuase we have some ironing out to do in the worksheet, like the code writing section is very strancge for me and i feel it could use a sprous up
 """
 
